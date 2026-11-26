@@ -29,6 +29,13 @@ function loadState() {
     if (!raw) return cloneSample();
     const parsed = JSON.parse(raw);
     if (!parsed || parsed.version !== 1 || !Array.isArray(parsed.transactions)) return cloneSample();
+    // A saved state is only trusted whole: a missing budgets map or goals
+    // list (e.g. from a hand-edited or older save) would crash every view
+    // that reads them, so fall back to the sample values for those parts.
+    if (!parsed.budgets || typeof parsed.budgets !== 'object') {
+      parsed.budgets = Object.fromEntries(CATEGORIES.map((c) => [c.id, c.budget]));
+    }
+    if (!Array.isArray(parsed.goals)) parsed.goals = GOALS.map((g) => ({ ...g }));
     return parsed;
   } catch {
     return cloneSample();
