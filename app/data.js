@@ -57,7 +57,7 @@ export const TRANSACTIONS = [
   { id: 't11', date: '2026-11-04', description: 'Corner Market top-up', category: 'groceries', amount: 42.75, type: 'expense' },
   { id: 't12', date: '2026-11-04', description: 'Haircut — Daniel', category: 'personal', amount: 25.00, type: 'expense' },
   { id: 't13', date: '2026-11-05', description: 'Bus passes — Maya & Leo', category: 'transport', amount: 38.00, type: 'expense' },
-  { id: 't14', date: '2026-11-05', description: 'Winter jacket — Sam', category: 'clothing', amount: 62.00, type: 'expense' },
+  { id: 't14', date: '2026-11-05', description: 'Winter jacket — Leo', category: 'clothing', amount: 62.00, type: 'expense' },
   { id: 't15', date: '2026-11-05', description: 'Cloud storage', category: 'subscriptions', amount: 9.99, type: 'expense' },
   { id: 't16', date: '2026-11-06', description: 'Water bill', category: 'utilities', amount: 48.25, type: 'expense' },
   { id: 't17', date: '2026-11-06', description: 'Art supplies — Maya', category: 'kids', amount: 34.50, type: 'expense' },
