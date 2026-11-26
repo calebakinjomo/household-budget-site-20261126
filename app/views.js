@@ -77,6 +77,8 @@ function transactionRows(list) {
   }).join('');
 }
 
+// Newest first; same-date ties break by id so the order is stable
+// (the Transactions page sorts by date only and keeps insertion order).
 function recentTransactions(n) {
   return [...state.transactions]
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id < b.id ? 1 : -1))
