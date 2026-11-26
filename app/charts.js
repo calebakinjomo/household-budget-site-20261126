@@ -61,6 +61,8 @@ export function dailyChart(days) {
   const slot = plotW / days.length;
   const barW = Math.max(4, Math.min(18, slot * 0.62));
 
+  // The gold line is the running total, scaled to the month's total spend —
+  // a different scale from the bars, whose gridlines show one day's spend.
   let bars = '';
   let cum = 0;
   let linePts = '';
